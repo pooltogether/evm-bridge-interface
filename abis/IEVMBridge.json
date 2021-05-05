@@ -1,0 +1,24 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "to",
+        "type": "address[]"
+      },
+      {
+        "name": "value",
+        "type": "uint256[]"
+      },
+      {
+        "name": "data",
+        "type": "bytes[]"
+      }
+    ],
+    "name": "execute",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
