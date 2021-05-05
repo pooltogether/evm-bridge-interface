@@ -7,5 +7,10 @@ pragma experimental ABIEncoderV2;
 interface IEVMBridge {
 
   /// @notice Called to execute calls on the child side of the bridge.
-  function execute(address[] to, uint256[] value, bytes[] data) external;
+  /// @dev The parameter arrays must be of equal length, and together form a tuple of (to, value, data) that defines a call to a contract.
+  /// @param to The addresses of L2 contracts to call
+  /// @param value The values to send to each of the address (i.e. Matic on Polygon)
+  /// @param data The calldata for the call
+  /// @return True if the message was sent successfully
+  function execute(address[] to, uint256[] value, bytes[] data) external returns (bool);
 }
